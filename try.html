@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .showshow{
+        visibility: show;
+      }
+    </style>
+  </head>
+<body>
+
+<p>Click the button to display a time-based greeting:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<input type="" name="" id="mainid">
+
+<script>
+function myFunction() {
+  var un = document.getElementById("user").value;
+  var ps = document.getElementById("pass").value;
+  if (un="") {
+    document.getElementById("mainid").css('background-color','red')
+  }
+  if (ps="") {}
+  var hour = new Date().getHours(); 
+  var greeting;
+  if (hour < 18) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+  document.getElementById("demo").innerHTML = greeting;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+      <input id="myInput">
+
+      <div id="addho" class="addkardo">
+        <div class="dropdown-menu">
+          <ul>
+                
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Bootstrap</a></li>
+            <li><a href="#">Angular</a></li>
+          </ul>
+          
+      </div>
+
+      </div>
+    
+<script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $(".dropdown-menu li").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+</script>
+<script>
+    $(document).ready(function(){
+      $('button').on({
+        mouseenter:function(){
+          $(this).css('background','red');
+        },
+        mouseleave:function(){
+          $("h1").css('display','none');
+        },mouseenter:function(){
+          $("h1").css('display','show');
+        }
+      });
+    });
+</script>
+<style>
+  .showshow{
+    display: show;
+  }  
+  .take{
+    display: show;
+  }
+ .addhoclass{
+    visibility: show;
+    background: black;
+    display: show;
+  } .addkardo{
+    background: red;
+    visibility: show;
+    display: none;
+  }
+</style>
+<button>click</button>
+<div class="heloo">
+  <h1>hello add ho</h1>
+  
+</div>
+
+</body>
+</html>
